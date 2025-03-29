@@ -58,7 +58,7 @@ proxies:
     ws-opts:
       path: "/vmess"
       headers:
-        Host: "www.youtube.com"
+        Host: "cdn.Snapchat.com"
 
   - name: LIMITLESS STREEAMING BL
     type: vmess
