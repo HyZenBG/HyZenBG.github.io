@@ -63,7 +63,7 @@ proxies:
         Host: "www.youtube.com"
         
 proxy-groups:
-  - name: BDCLOUD-GIVEWAY
+  - name: BDCLOUD
     type: select
     proxies:
       - DIRECT
@@ -75,23 +75,9 @@ proxy-groups:
 rules:
   #  - SCRIPT,NULLDNS,REJECT 
   - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
-  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
-  - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
   - IP-CIDR6,::1/128,DIRECT,no-resolve
   - IP-CIDR6,fc00::/7,DIRECT,no-resolve
   - IP-CIDR6,fe80::/10,DIRECT,no-resolve
   - IP-CIDR6,fd00::/8,DIRECT,no-resolve
-  - DOMAIN-SUFFIX,ad.com,REJECT
-  - DOMAIN,analytics.google.com,REJECT
-  - DOMAIN,analyticsinsights-pa.googleapis.com,REJECT
-  - DOMAIN,analyticsreporting.googleapis.com,REJECT
-  - DOMAIN-SUFFIX,doubleclick.net,REJECT
-  - DOMAIN-SUFFIX,googleadservices.com,REJECT
-  - DOMAIN-SUFFIX,googleadsserving.cn,REJECT
-  - DOMAIN-SUFFIX,googlesyndication.com,REJECT
-  - DOMAIN-SUFFIX,googletagmanager.com,REJECT
-  - DOMAIN-SUFFIX,googletagservices.com,REJECT
-  - DOMAIN-SUFFIX,google-analytics.com,REJECT
-  - IP-CIDR,172.16.50.7/24,BDCLOUD-GIVEWAY
-  - MATCH,BDCLOUD-GIVEWAY
+  - IP-CIDR,172.16.50.7/24,BDCLOUD
+  - MATCH,BDCLOUD
